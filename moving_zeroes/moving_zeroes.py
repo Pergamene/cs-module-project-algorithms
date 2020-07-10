@@ -3,13 +3,17 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
-
-    pass
-
+  # Your code here
+  newList = []
+  for num in arr:
+    if num == 0:
+      newList.append(num)
+    else:
+      newList.insert(0, num)
+  return newList
 
 if __name__ == '__main__':
-    # Use the main function here to test out your implementation
-    arr = [0, 3, 1, 0, -2]
+  # Use the main function here to test out your implementation
+  arr = [0, 3, 1, 0, -2]
 
-    print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
+  print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
