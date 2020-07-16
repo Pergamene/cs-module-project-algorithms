@@ -13,7 +13,6 @@ def eating_cookies(n):
 def _generate_counts(n):
   all_counts = set()
   max_threes = floor(n / 3)
-  max_twos = floor(n / 2)
   for threes in range(max_threes+1):
     max_twos = floor((n - 3 * threes) / 2)
     for twos in range(max_twos+1):
