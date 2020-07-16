@@ -15,10 +15,8 @@ def _generate_counts(n):
   max_threes = floor(n / 3)
   max_twos = floor(n / 2)
   for threes in range(max_threes+1):
-    for twos_max in range(max_twos+1):
-      twos = twos_max
-      while (3 * threes + 2 * twos) > n:
-        twos -= 1
+    max_twos = floor((n - 3 * threes) / 2)
+    for twos in range(max_twos+1):
       ones = n - 3 * threes - 2 * twos
       total = threes + twos + ones
       all_counts.add((total, threes, twos, ones))
