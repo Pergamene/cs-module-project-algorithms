@@ -25,9 +25,9 @@ def _find_permunations(counts):
   count_total = 0
   for count in counts:
     total, threes, twos, ones = count
-    permutations = factorial(total) / (factorial(threes) * factorial(twos) * factorial(ones))
-    count_total += int(permutations)
-  return count_total 
+    permutations = factorial(total) // (factorial(threes) * factorial(twos) * factorial(ones))
+    count_total += permutations
+  return count_total
 
 if __name__ == "__main__":
   # Use the main function here to test out your implementation
