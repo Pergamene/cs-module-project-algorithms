@@ -16,7 +16,6 @@ class Test(unittest.TestCase):
 
     self.assertEqual(single_number(arr), num)
 
-
 if __name__ == '__main__':
   unittest.main()
   
